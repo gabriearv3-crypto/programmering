@@ -43,5 +43,32 @@ Två värden är minst 80: 92 och 80.
 | 6 | 10 | Logiskt fel | Jämförde med förväntad utskrift och granskade villkoret. | Villkoret > räknade inte med exakt 80. | Ändrade > till >=. | Testa värden precis på gränsen. |
 
 ## Del 3: Debuggern
+Efter genomgången förväntar jag mig 9 misslyckade
+inloggningar totalt och 2 timmar med larm.
+| När programmet pausar | antal | misslyckade | timmar_med_larm |
+|---|---|---|---|
+| Rad 5, varv 1 | 3 | 0 | 0 |
+| Rad 5, varv 2 | 0 | 3 | 1 |
+| Rad 5, varv 3 | 5 | 3 | 1 |
+| Rad 5, varv 4 | 1 | 8 | 2 |
+| Rad 8, efter loopen | 1 | 9 | 2 |
 
+### Varför ändras timmar_med_larm inte i varje varv?
+
+timmar_med_larm ändras bara när antal är minst 3.
+När antal är 0 eller 1 är villkoret falskt och räknaren ändras inte.
+### Vilket värde har antal när loopen är klar? Varför?
+
+antal har värdet 1 eftersom det är det sista värdet i listan.
+Variabeln behåller sitt värde efter loopen.
+### Stämde min förväntan?
+
+Ja, efter genomgången förväntade jag mig 9 misslyckade
+inloggningar och 2 timmar med larm. Det stämde med resultatet.
+
+### Hur kan debuggern hjälpa mig att hitta logiska fel?
+
+Jag kan köra en rad i taget och se hur variablernas värden ändras.
+Då kan jag upptäcka om ett värde hoppas över eller om ett villkor
+ger fel resultat, även om programmet inte visar något felmeddelande.
 ## Del 4: Refaktorering
