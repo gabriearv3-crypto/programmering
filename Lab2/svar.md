@@ -78,4 +78,26 @@ Utskrift från rorig.py:
 tot 1055
 snitt 211.0
 hog 2
-```
+```### Vad ändrade jag och varför?
+
+Jag bytte namn på variablerna så att det blir lättare att förstå
+vad de används till. Till exempel blev a till svarstider_ms.
+
+Jag delade upp beräkningarna i två funktioner. En räknar summan
+och en räknar hur många svar som är långsamma.
+
+Jag gav gränsen 300 ett namn så att man lätt ser vad talet betyder.
+
+Jag lade också till mellanslag och tydligare indrag så att
+koden blir lättare att läsa.
+
+### Hur kontrollerade jag resultatet?
+
+Jag körde båda programmen och jämförde siffrorna.
+Båda visade 1055, 211.0 och 2, så resultatet blev samma.
+
+### Varför är läsbar kod viktig i ett driftteam?
+
+När flera personer jobbar med samma skript behöver alla kunna
+förstå koden. Då blir det lättare att hitta fel och göra ändringar
+utan att råka förstöra något.
