@@ -72,3 +72,10 @@ Jag kan köra en rad i taget och se hur variablernas värden ändras.
 Då kan jag upptäcka om ett värde hoppas över eller om ett villkor
 ger fel resultat, även om programmet inte visar något felmeddelande.
 ## Del 4: Refaktorering
+Utskrift från rorig.py:
+
+```text
+tot 1055
+snitt 211.0
+hog 2
+```
