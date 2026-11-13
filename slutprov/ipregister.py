@@ -1,9 +1,30 @@
 # Ett program som håller koll på enheters IP-adresser.
 import ipaddress
+enheter = []
 # Visar ett meddelande när programmet avslutas.
 def avsluta():
     print("Programmet avslutas")
+# Kontrollerar namn och IP-adress och sparar enheten.
+def lagg_till(natet, enheter):
+    while True:
+        namn = input("Ange enhetens namn: ").strip()
+        if namn != "":
+            break
+        print("Namnet får inte vara tomt.")
 
+    while True:
+        try:
+            ip = ipaddress.ip_address(input("Ange IP-adress: "))
+
+            if ip not in natet:
+                print("Adressen ligger inte i kontorets nätverk.")
+            else:
+                enheter.append([namn, str(ip)])
+                print("Enheten har lagts till.")
+                break
+
+        except ValueError:
+            print("Ogiltig IP-adress. Skriv till exempel 192.168.10.20.")
 while True:
     try:
         natet = input("Ange nätverk, till exempel 192.168.10.0/24: ")
@@ -22,7 +43,7 @@ while True:
     val = input("Välj 1, 2 eller 3: ")
 
     if val == "1":
-        print("Här ska vi lägga till enheter senare")
+        lagg_till(natet, enheter)
     elif val == "2":
         print("Här ska vi visa enheter senare")
     elif val == "3":
