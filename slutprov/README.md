@@ -46,9 +46,16 @@ Upprepa menyn tills användaren väljer att avsluta
     Annars
         Visa felmeddelande
 ## Redogörelse
+Jag använder en while-loop för att visa menyn igen efter varje val.
+När användaren väljer 3 avslutas loopen med break.
 
+Jag använder try och except för att hantera felaktiga IP-adresser.
+Om användaren skriver fel visas ett felmeddelande och användaren
+får försöka igen i stället för att programmet kraschar.
 ## AI-logg
-
+Jag använde ChatGPT för vägledning, kodförslag och förklaringar.
+Jag arbetade stegvis i VS Code, testade programmets funktioner
+och rättade fel med stöd av ChatGPT.
 ## Reflektion
 
 ## Testtabell (för A)
