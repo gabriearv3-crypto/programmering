@@ -1,6 +1,13 @@
 # Ett program som håller koll på enheters IP-adresser.
 import ipaddress
 enheter = []
+# Visar alla enheter med nummer, namn och IP-adress.
+def visa_enheter(enheter):
+    nummer = 1
+    for enhet in enheter:
+        print(nummer, enhet[0], enhet[1])
+        nummer = nummer + 1
+
 # Visar ett meddelande när programmet avslutas.
 def avsluta():
     print("Programmet avslutas")
@@ -45,7 +52,7 @@ while True:
     if val == "1":
         lagg_till(natet, enheter)
     elif val == "2":
-        print("Här ska vi visa enheter senare")
+        visa_enheter(enheter)
     elif val == "3":
         avsluta()
         break
